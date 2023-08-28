@@ -42,7 +42,7 @@ function compileNearley(
   return generate(c, opts.export)
 }
 
-export function NearlyPlugin(
+export function NearleyPlugin(
   opts: NearleyPluginOptions = defaultNearleyPluginOptions
 ): Plugin {
   return {
@@ -84,4 +84,4 @@ export function NearlyPlugin(
   }
 }
 
-export default NearlyPlugin(defaultNearleyPluginOptions)
+export default NearleyPlugin(defaultNearleyPluginOptions)
