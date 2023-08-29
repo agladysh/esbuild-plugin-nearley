@@ -4,6 +4,9 @@ const { peerDependencies } = require('./package.json')
 const external = Object.keys(peerDependencies)
 
 let watch = process.argv.some((arg) => arg == '--watch')
+if (watch) {
+  throw new Error('TODO: Support new watch API in modern esbuild');
+}
 
 if (watch) {
   watch = {
@@ -23,7 +26,7 @@ esbuild
     format: 'cjs',
     sourcemap: true,
     bundle: true,
-    external,
-    watch
+    external//,
+    // watch
   })
   .catch(() => process.exit(1))
